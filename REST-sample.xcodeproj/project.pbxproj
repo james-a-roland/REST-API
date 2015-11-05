@@ -13,6 +13,7 @@
 		4CC64DED1BEC10BF002EBA41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CC64DEB1BEC10BF002EBA41 /* LaunchScreen.storyboard */; };
 		4CC64DF61BEC10F6002EBA41 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC64DF41BEC10F6002EBA41 /* HomeViewController.swift */; };
 		4CC64DF71BEC10F6002EBA41 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC64DF51BEC10F6002EBA41 /* HomeViewController.xib */; };
+		4CC64DF91BEC1CA4002EBA41 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC64DF81BEC1CA4002EBA41 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		4CC64DEE1BEC10BF002EBA41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CC64DF41BEC10F6002EBA41 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4CC64DF51BEC10F6002EBA41 /* HomeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		4CC64DF81BEC1CA4002EBA41 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
 		D9944885517C39DFC27CBEF4 /* Pods_REST_sample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_REST_sample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -63,6 +65,7 @@
 			children = (
 				4CC64DE21BEC10BF002EBA41 /* AppDelegate.swift */,
 				4CC64DF41BEC10F6002EBA41 /* HomeViewController.swift */,
+				4CC64DF81BEC1CA4002EBA41 /* Constants.swift */,
 				4CC64DF51BEC10F6002EBA41 /* HomeViewController.xib */,
 				4CC64DE91BEC10BF002EBA41 /* Assets.xcassets */,
 				4CC64DEB1BEC10BF002EBA41 /* LaunchScreen.storyboard */,
@@ -211,6 +214,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4CC64DF91BEC1CA4002EBA41 /* Constants.swift in Sources */,
 				4CC64DE31BEC10BF002EBA41 /* AppDelegate.swift in Sources */,
 				4CC64DF61BEC10F6002EBA41 /* HomeViewController.swift in Sources */,
 			);
