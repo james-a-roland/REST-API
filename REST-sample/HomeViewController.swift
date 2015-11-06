@@ -10,26 +10,42 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+  private let services = NSArray(array: ["Yelp", "Github"])
 
-        // Do any additional setup after loading the view.
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    // Do any additional setup after loading the view.
+  }
 
-    /*
-    // MARK: - Navigation
+  override func didReceiveMemoryWarning() {
+    super.didReceiveMemoryWarning()
+    // Dispose of any resources that can be recreated.
+  }
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+}
 
+extension HomeViewController: UITableViewDataSource {
+
+  func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    //let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
+    let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
+    let str = services.objectAtIndex(indexPath.row)
+    print(str)
+    print(cell)
+    cell.textLabel?.text = services.objectAtIndex(indexPath.row) as! String
+    return cell
+  }
+
+  func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return services.count
+  }
+
+}
+
+extension HomeViewController: UITableViewDelegate {
+
+  func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    print(tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)
+  }
 }

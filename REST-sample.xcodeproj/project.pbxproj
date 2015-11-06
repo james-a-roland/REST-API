@@ -65,8 +65,8 @@
 			children = (
 				4CC64DE21BEC10BF002EBA41 /* AppDelegate.swift */,
 				4CC64DF41BEC10F6002EBA41 /* HomeViewController.swift */,
-				4CC64DF81BEC1CA4002EBA41 /* Constants.swift */,
 				4CC64DF51BEC10F6002EBA41 /* HomeViewController.xib */,
+				4CC64DF81BEC1CA4002EBA41 /* Constants.swift */,
 				4CC64DE91BEC10BF002EBA41 /* Assets.xcassets */,
 				4CC64DEB1BEC10BF002EBA41 /* LaunchScreen.storyboard */,
 				4CC64DEE1BEC10BF002EBA41 /* Info.plist */,
