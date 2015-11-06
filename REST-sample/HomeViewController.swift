@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import OAuthSwift
 
 class HomeViewController: UIViewController {
 
-  private let services = NSArray(array: ["Yelp", "Github"])
+  private let services = NSArray(array: [yelp, github])
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -30,9 +31,6 @@ extension HomeViewController: UITableViewDataSource {
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     //let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "Cell")
     let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "Cell")
-    let str = services.objectAtIndex(indexPath.row)
-    print(str)
-    print(cell)
     cell.textLabel?.text = services.objectAtIndex(indexPath.row) as! String
     return cell
   }
@@ -45,7 +43,25 @@ extension HomeViewController: UITableViewDataSource {
 
 extension HomeViewController: UITableViewDelegate {
 
-  func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
-    print(tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text)
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    print(indexPath.row)
+    let text : String = services.objectAtIndex(indexPath.row) as! String
+    switch text {
+    case yelp:
+      authenticateYelp()
+    case github:
+      authenticateGithub()
+    default:
+      print("Default (Check ViewController tableView)")
+    }
   }
+
+  private func authenticateYelp() {
+
+  }
+
+  private func authenticateGithub() {
+    
+  }
+
 }
