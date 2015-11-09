@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController" customModule="REST_sample" customModuleProvider="target">
             <connections>
+                <outlet property="serviceLabel" destination="2Q8-Nj-DBx" id="19e-1G-QtP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +15,46 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Q8-Nj-DBx">
+                    <rect key="frame" x="279" y="100" width="42" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="veo-9x-Dmt">
+                    <rect key="frame" x="8" y="124" width="137" height="30"/>
+                    <state key="normal" title="Validate Credentials"/>
+                    <connections>
+                        <action selector="validateCredentials:" destination="-1" eventType="touchUpInside" id="osF-Nc-3wa"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amM-T0-XZn">
+                    <rect key="frame" x="8" y="457" width="101" height="30"/>
+                    <state key="normal" title="API Endpoint 2"/>
+                    <connections>
+                        <action selector="callAPI2:" destination="-1" eventType="touchUpInside" id="Wq0-TC-oL8"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2T-s7-GBJ">
+                    <rect key="frame" x="8" y="285" width="99" height="30"/>
+                    <state key="normal" title="API Endpoint 1"/>
+                    <connections>
+                        <action selector="callAPI1:" destination="-1" eventType="touchUpInside" id="LDR-0D-nqq"/>
+                    </connections>
+                </button>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="2Q8-Nj-DBx" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="9rC-9X-XzY"/>
+                <constraint firstItem="veo-9x-Dmt" firstAttribute="top" secondItem="2Q8-Nj-DBx" secondAttribute="bottom" constant="3" id="IRf-m5-NB8"/>
+                <constraint firstItem="amM-T0-XZn" firstAttribute="top" secondItem="L2T-s7-GBJ" secondAttribute="bottom" constant="142" id="JiC-aG-fkc"/>
+                <constraint firstItem="L2T-s7-GBJ" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="WJe-Gp-67L"/>
+                <constraint firstItem="2Q8-Nj-DBx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="cRC-Qm-m7T"/>
+                <constraint firstItem="amM-T0-XZn" firstAttribute="leading" secondItem="L2T-s7-GBJ" secondAttribute="leading" id="kVt-R5-fAX"/>
+                <constraint firstItem="veo-9x-Dmt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="m1C-I2-jaK"/>
+                <constraint firstItem="L2T-s7-GBJ" firstAttribute="leading" secondItem="veo-9x-Dmt" secondAttribute="leading" id="zgK-up-652"/>
+            </constraints>
         </view>
     </objects>
 </document>

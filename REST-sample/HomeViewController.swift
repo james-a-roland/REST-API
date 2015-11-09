@@ -11,7 +11,7 @@ import OAuthSwift
 
 class HomeViewController: UIViewController {
 
-  private let services = NSArray(array: [Github(), Yelp()])
+  private let services = NSArray(array: [GithubService(), YelpService()])
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -46,15 +46,7 @@ extension HomeViewController: UITableViewDelegate {
 
   func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
     let service = services.objectAtIndex(indexPath.row) as! Service
-
+    let dvc = DetailViewController(service: service)
+    self.navigationController?.pushViewController(dvc, animated: true)
   }
-
-  private func authenticateYelp() {
-
-  }
-
-  private func authenticateGithub() {
-    
-  }
-
 }
